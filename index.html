@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMMS Desktop Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="window" role="application" aria-label="OMMS app shell">
+      <header class="titlebar">
+        <div class="traffic-lights" aria-hidden="true">
+          <span class="dot close"></span>
+          <span class="dot minimize"></span>
+          <span class="dot maximize"></span>
+        </div>
+        <h1>OMMS</h1>
+        <button id="themeToggle" class="ghost">Dark</button>
+      </header>
+
+      <section class="toolbar">
+        <button class="seg active">Overview</button>
+        <button class="seg">Queue</button>
+        <button class="seg">Reports</button>
+        <button class="seg">Settings</button>
+      </section>
+
+      <section class="content-grid">
+        <article class="card">
+          <h2>System Status</h2>
+          <p>All services operational.</p>
+          <div class="meter"><span style="width: 94%"></span></div>
+        </article>
+
+        <article class="card">
+          <h2>Today</h2>
+          <ul>
+            <li>42 active sessions</li>
+            <li>8 queued jobs</li>
+            <li>1 notification pending</li>
+          </ul>
+        </article>
+
+        <article class="card full">
+          <h2>Recent Activity</h2>
+          <table>
+            <thead>
+              <tr><th>Time</th><th>Event</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>09:12</td><td>Data sync complete</td><td><span class="badge ok">OK</span></td></tr>
+              <tr><td>09:01</td><td>Export requested</td><td><span class="badge warn">Queued</span></td></tr>
+              <tr><td>08:44</td><td>Backup validated</td><td><span class="badge ok">OK</span></td></tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
